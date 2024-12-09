@@ -1,0 +1,15 @@
+{
+  "name": "examples",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc src/index.ts --outDir dist",
+    "dev": "tsc -w src/index.ts --outDir dist"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "typescript": "^5.6.3"
+  }
+}

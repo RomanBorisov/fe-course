@@ -1,0 +1,41 @@
+/* wrapper */
+.wrapper {
+}
+
+/* header */
+.header {
+    height: 64px;
+    padding: 0 20px;
+
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* MAIN */
+.chat-page {
+    display: flex;
+    justify-content: center;
+}
+
+
+.row {
+    display: flex;
+}
+
+.row--center-x {
+    justify-content: center;
+}
+
+.row--center-x {
+    align-items: center;
+}
+
+.chat-page-sidebar {
+    max-width: 342px;
+    width: 100%;
+}
+
+.chat {
+    max-width: 580px;
+    width: 100%;
+}
