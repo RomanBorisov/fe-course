@@ -1,0 +1,11 @@
+.todo-item {
+    display: flex;
+
+    padding: 10px 20px;
+    border-radius: 18px;
+    align-items: center;
+
+    &--completed {
+        opacity: 0.5;
+    }
+}

@@ -1,0 +1,60 @@
+<header class="row">
+    <h2 mat-dialog-title>{{ header }}</h2>
+
+    <div class="row__spacer"></div>
+
+    @if (hasCloseButton) {
+       1
+    }
+</header>
+
+<mat-dialog-content class="modal-content">
+    @if (description) {
+        {{ description }}
+    }
+
+    <ng-container #contentTpl>
+        <ng-content/>
+    </ng-container>
+</mat-dialog-content>
+
+
+@if (hasFooter) {
+    <mat-dialog-actions
+        class="row"
+        align="end"
+    >
+        <div
+            #footerTpl
+            class="fill-parent-x"
+        >
+            <ng-content select="[footer]"/>
+        </div>
+
+        @if (footerTpl.childElementCount === 0) {
+            @if (hasCancelButton) {
+                <button
+                    type="button"
+                    mat-stroked-button
+                    color="warn"
+                    [disabled]="disableCancel"
+                    (click)="cancel()"
+                >
+                    {{ cancelBtnText }}
+                </button>
+            }
+
+            <div class="row__spacer"></div>
+
+            <button
+                type="button"
+                color="primary"
+                mat-flat-button
+                [disabled]="disableSubmit"
+                (click)="submit()"
+            >
+                {{ submitBtnText }}
+            </button>
+        }
+    </mat-dialog-actions>
+}

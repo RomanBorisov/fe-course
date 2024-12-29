@@ -1,0 +1,34 @@
+<div class="todo-item__title">
+    {{ item.title }}
+</div>
+
+<div class="row__spacer"></div>
+
+<div class="todo-item__actions row">
+    <button
+        type="button"
+        mat-mini-fab
+        mat-dialog-close
+        (click)="onToggle()"
+    >
+        <mat-icon>{{ item.completed ? 'check_circle' : 'radio_button_unchecked' }}</mat-icon>
+    </button>
+
+    <button
+        type="button"
+        mat-mini-fab
+        mat-dialog-close
+        (click)="onEdit()"
+    >
+        <mat-icon>edit</mat-icon>
+    </button>
+
+    <button
+        type="button"
+        mat-mini-fab
+        mat-dialog-close
+        (click)="onDelete()"
+    >
+        <mat-icon>delete</mat-icon>
+    </button>
+</div>

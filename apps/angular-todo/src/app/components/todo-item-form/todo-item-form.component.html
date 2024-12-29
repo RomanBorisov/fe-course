@@ -1,0 +1,29 @@
+<div class="create-todo-form__heading">
+    Create a new todo item
+</div>
+
+<form
+    [formGroup]="form"
+    (ngSubmit)="submit()"
+    class="create-todo-form__form"
+>
+    <app-text-input
+        class="create-todo-form__title"
+        formControlName="title"
+        label="Title"
+    ></app-text-input>
+
+    <app-color-input
+        class="create-todo-form__color"
+        formControlName="color"
+        label="Color"
+    ></app-color-input>
+
+    <button
+        [disabled]="loading"
+        type="button"
+        mat-fab
+    >
+        <mat-icon>add</mat-icon>
+    </button>
+</form>

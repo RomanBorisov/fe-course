@@ -1,0 +1,6 @@
+<app-modal>
+    <app-todo-item-form
+        [todoItem]="modalConfig.data.todoItem"
+        (edited)="updateTodoItem($event)"
+    ></app-todo-item-form>
+</app-modal>

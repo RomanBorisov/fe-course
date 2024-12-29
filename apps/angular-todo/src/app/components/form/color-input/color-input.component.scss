@@ -1,0 +1,14 @@
+.color-input {
+    &__field {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    &__picker {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}

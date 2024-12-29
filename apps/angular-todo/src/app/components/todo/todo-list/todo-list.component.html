@@ -1,0 +1,14 @@
+<h2 class="todo-list__heading">
+    Todo List
+</h2>
+
+<div class="todo-list__container">
+    @for (item of todoList; track item.id) {
+        <app-todo-item
+            [item]="item"
+            (delete)="deleteItemById(item.id)"
+            (toggled)="toggleItemById(item.id)"
+            (updated)="updateItem($event)"
+        ></app-todo-item>
+    }
+</div>

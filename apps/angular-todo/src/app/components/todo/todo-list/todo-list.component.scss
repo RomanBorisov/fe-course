@@ -1,0 +1,17 @@
+.todo-list {
+    display: grid;
+    gap: 10px;
+    padding: 20px;
+
+    &__heading {
+        font-size: 24px;
+        font-weight: bold;
+
+        text-align: center;
+    }
+
+    &__container {
+        display: grid;
+        gap: 10px;
+    }
+}

@@ -1,0 +1,9 @@
+<app-todo-item-form
+    (created)="addTodoItem($event)"
+/>
+
+@if (todoList.length) {
+    <app-todo-list
+        [todoList]="todoList"
+    ></app-todo-list>
+}

@@ -1,0 +1,20 @@
+<mat-form-field class="custom-mat-form-field color-input__field">
+    <mat-label>
+        {{ label }}
+    </mat-label>
+
+    <input
+        (input)="handleInputChange($event)"
+        [(ngModel)]="value"
+        matInput
+        [placeholder]="label"
+        type="text"
+    >
+
+    <ngx-colors
+        class="color-input__picker"
+        ngx-colors-trigger
+        (ngModelChange)="handleColorChange($event)"
+        [(ngModel)]="value"
+    ></ngx-colors>
+</mat-form-field>

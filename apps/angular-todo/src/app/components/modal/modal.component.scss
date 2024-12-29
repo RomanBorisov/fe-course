@@ -1,0 +1,64 @@
+.modal {
+    display: grid;
+    padding: var(--modal-padding, 16px);
+    color: var(--modal-text-color, #222222);
+    background: var(--modal-bg-color, var(--container-bg-color));
+    border-radius: var(--modal-border-radius, 8px);
+    box-shadow: var(--modal-box-shadow, 0 8px 16px 0 rgba(0, 0, 0, 0.40));
+    position: relative;
+
+    &__backdrop {
+        margin-top: var(--header-height, 40px);
+        background: var(--modal-backdrop-color, rgba(0, 0, 0, 0.50));
+
+        &--filled {
+            margin-top: 0;
+        }
+    }
+
+    &__panel {
+        width: 100%;
+        padding: 0 var(--modal-outer-offset, 16px);
+    }
+
+    &__footer {
+        --row-gap: var(--modal-footer-buttons-gap, 12px);
+        margin-top: var(--modal-footer-top-offset, 24px);
+    }
+
+    &__close-button {
+        position: absolute;
+        right: var(--modal-close-btn-right-offset, 16px);
+        top: var(--modal-close-btn-top-offset, 16px);
+    }
+
+    &__close-icon {
+        color: var(--modal-text-color, #222222);
+        font-size: 16px;
+        line-height: 16px;
+    }
+
+    &__header {
+        --rows-gap: var(--modal-header-rows-gap, --header-info-rows-gap);
+
+        &--offsetable {
+            margin-bottom: var(--modal-header-bottom-offset, 24px);
+        }
+    }
+
+    &__title {
+        font-size: var(--modal-title-font-size, var(--header-info-title-font-size));
+        font-weight: var(--modal-title-font-weight, var(--header-info-title-font-weight));
+        line-height: var(--modal-title-line-height, var(--header-info-title-line-height));
+        color: var(--modal-title-color);
+        text-align: var(--modal-header-align, left);
+    }
+
+    &__description {
+        font-size: var(--modal-description-font-size, var(--header-info-description-font-size));
+        font-weight: var(--modal-description-font-weight, var(--header-info-description-font-weight));
+        line-height: var(--modal-description-line-height, var(--header-info-description-line-height));
+        color: var(--modal-description-color, var(--header-info-description-color));
+        text-align: var(--modal-header-align, left);
+    }
+}
