@@ -1,7 +1,6 @@
 import { Component, EventEmitter, Inject, Input, OnInit, Output, ViewEncapsulation } from '@angular/core';
-import { MatDialogActions, MatDialogClose, MatDialogContent, MatDialogTitle } from '@angular/material/dialog';
-import { MatIcon } from '@angular/material/icon';
-import { MatButton, MatMiniFabButton } from '@angular/material/button';
+import { MatDialogActions, MatDialogContent, MatDialogTitle } from '@angular/material/dialog';
+import { MatButton } from '@angular/material/button';
 import { DIALOG_DATA, DialogRef } from '@angular/cdk/dialog';
 import { IModalConfig } from '../../services/modal.service';
 
@@ -14,11 +13,9 @@ import { IModalConfig } from '../../services/modal.service';
     imports: [
         MatDialogContent,
         MatDialogTitle,
-        MatIcon,
         MatButton,
-        MatDialogClose,
         MatDialogActions,
-        MatMiniFabButton,
+
     ],
     host: {
         class: 'modal'
