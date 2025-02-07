@@ -1,0 +1,24 @@
+.header {
+    padding: 20px;
+    background-color: tomato;
+    color: white;
+
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__links {
+    display: flex;
+    gap: 20px;
+}
+
+.header__link {
+    background: #00234c;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.header__link--active {
+    background: #ffcc00;
+}

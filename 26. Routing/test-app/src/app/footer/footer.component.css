@@ -1,0 +1,9 @@
+.footer {
+    background-color: #00234c;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 20px;
+    display: block;
+    font-family: 'Roboto', sans-serif;
+}

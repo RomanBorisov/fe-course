@@ -1,0 +1,25 @@
+<div class="wrapper">
+    <app-header></app-header>
+
+    <main class="wrapper__main main">
+        <router-outlet></router-outlet>
+
+        <div class="main__discount">
+            <h2>DISCOUNT SECTION</h2>
+
+            <a [routerLink]="[{outlets: {discount: null}}]">
+                Hide discount
+            </a>
+
+            <a [routerLink]="[{outlets: {discount: 'discount-info'}}]">
+                Show discount
+            </a>
+
+            <router-outlet
+                name="discount"
+            ></router-outlet>
+        </div>
+    </main>
+
+    <app-footer></app-footer>
+</div>
