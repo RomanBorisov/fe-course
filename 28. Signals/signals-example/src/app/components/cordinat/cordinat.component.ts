@@ -5,8 +5,10 @@ import { Component, computed, signal } from '@angular/core';
     template: `
         <div style="text-align:center">
             <h1>Reactive Signal Example</h1>
+            
             <p>X: {{ x() }}, Y: {{ y() }}</p>
             <p>Distance from origin: {{ distance() }}</p>
+            
             <button (click)="moveRight()">Move Right</button>
             <button (click)="moveUp()">Move Up</button>
         </div>

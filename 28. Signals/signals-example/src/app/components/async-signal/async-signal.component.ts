@@ -6,11 +6,15 @@ import { JsonPipe, NgIf } from '@angular/common';
     template: `
         <div style="text-align:center">
             <h1>Async Signal Example</h1>
+            
             <div *ngIf="loading()">Loading...</div>
+            
             <div *ngIf="error()">Error: {{ error() }}</div>
+            
             <div *ngIf="data()">
                 <pre>{{ data() | json }}</pre>
             </div>
+            
             <button (click)="loadData()">Load Data</button>
         </div>
     `,
