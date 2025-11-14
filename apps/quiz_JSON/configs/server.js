@@ -15,8 +15,19 @@ server.post('/calculate-result', (req, res) => {
 
     answers.forEach(answer => {
         const question = questions.find(q => q.id === answer.questionId);
-        const correctQuestionAnswer = question.answers.find(answer => answer.correct);
-
+        
+        if (!question) {
+            console.warn(`Question with id ${answer.questionId} not found`);
+            return;
+        }
+        
+        const correctQuestionAnswer = question.answers.find(a => a.correct);
+        
+        if (!correctQuestionAnswer) {
+            console.warn(`No correct answer found for question ${answer.questionId}`);
+            return;
+        }
+    
         if (correctQuestionAnswer.id === answer.answerId) {
             correctAnswers++;
         }
